@@ -2,13 +2,14 @@
 const express = require('express');
 const morgan = require('morgan');
 const basicAuth = require('express-basic-auth');
+const randomstring = require('randomstring');
 
 const app = express();
 
 const data = [
   {
     longUrl: 'http://google.com',
-    id: '58DX37'
+    id: randomstring.generate(6)
   }
 ];
 
