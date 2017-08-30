@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="/static/index.css">
-</head>
-<body>
-  <h1>Hello Express</h1>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/static/index.css">
+  </head>
+  <body>
+    <h1>Hello Express</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>Long URL</td>
+          <td>Short URL</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(item => { %>
+          <tr>
+            <td><%= item.longUrl %></td>
+            <td><%= item.id %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
 </html>
